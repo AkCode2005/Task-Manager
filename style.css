@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  
+  .Container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+    padding: 20px;
+  }
+  
+  
+  .todo-app {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    margin: 0 auto;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out; 
+  }
+  
+  /* Heading Style */
+  .todo-app h2 {
+    color: #00bcd4; 
+    font-size: 32px; 
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 188, 212, 0.5); 
+  }
+  
+  .todo-app h2 img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  
+  input,
+  select,
+  input[type="date"],
+  button {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #333; 
+    color: #fff; 
+  }
+  
+  /* Button Styling */
+  button {
+    background: #00bcd4;
+    color: #fff;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    flex: 1;
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
+  }
+  
+  button:hover {
+    background-color: #0097a7; 
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.6);
+  }
+  
+
+  .filter-btn {
+    background: #444;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border: 1px solid #00bcd4;
+  }
+  
+  .filter-btn.active {
+    background: #00bcd4; 
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
+  }
+  
+  .filter-btn:hover {
+    background: #0097a7; 
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.5); 
+  }
+  
+ 
+  ul#list-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  ul#list-container li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2a2a2a; 
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.1); 
+    transition: transform 0.2s ease, background-color 0.3s;
+  }
+  
+  /* Task List Item Hover */
+  ul#list-container li:hover {
+    transform: scale(1.03);
+    background-color: #333; 
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.2); 
+  }
+  
+  /* Task Text */
+  ul#list-container li .task-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff; 
+    flex: 2;
+  }
+  
+  ul#list-container li .task-meta {
+    font-size: 14px;
+    color: #bbb; 
+    margin-left: 10px;
+    flex: 1;
+    text-align: right;
+  }
+  
+  /* Priority Coloring */
+  ul#list-container li.low {
+    border-left: 6px solid #4caf50; 
+  }
+  
+  ul#list-container li.medium {
+    border-left: 6px solid #ff9800; 
+  }
+  
+  ul#list-container li.high {
+    border-left: 6px solid #f44336;
+  }
+  
+
+  ul#list-container li.checked {
+    background-color: #555; 
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  ul#list-container li.checked .task-meta {
+    color: #777;
+  }
+  
+  /* Delete Button Styling */
+  ul#list-container li .delete-btn {
+    background: #ff5722;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(255, 87, 34, 0.2); 
+  }
+  
+  ul#list-container li .delete-btn:hover {
+    background: #e64a19; 
+    box-shadow: 0 4px 8px rgba(255, 87, 34, 0.3);
+  }
+  
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

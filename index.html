@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-image: url(./Image/bg_image.png)" ;>
+    <div class="container">
+      <div class="todo-app">
+        <h2>To-Do List <img src="./Image/Todo.jpg" alt="Task Icon" /></h2>
+        <div class="input-section">
+          <input type="text" id="input-box" placeholder="Add Your Task" />
+          <select id="priority-selector">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <input type="date" id="due-date" />
+          <button id="add-button">Add</button>
+        </div>
+        <div class="filter-options">
+          <button id="filter-all" class="filter-btn active">All</button>
+          <button id="filter-completed" class="filter-btn">Completed</button>
+          <button id="filter-pending" class="filter-btn">Pending</button>
+        </div>
+        <ul id="list-container"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
